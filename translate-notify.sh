@@ -65,7 +65,7 @@ if ${RETRIEVE_TEXT_FROM_CLIPBOARD}; then
 elif ${RETRIEVE_TEXT_FROM_SCREENSHOT}; then
 	# Take the screenshot with the mouse and increase image quality with option -q from default 75 to 100
 	SCREENSHOT_FILE="$(mktemp ~/.${0##*/}.XXXXXX.png)"
-	scrot -d 1 -s "${SCREENSHOT_FILE}" -q 100
+	scrot -s "${SCREENSHOT_FILE}" -q 100
 	
 	# Transform the screenshot file to increase detection rate
 	mogrify -modulate 100,0 -resize 400% "${SCREENSHOT_FILE}"
