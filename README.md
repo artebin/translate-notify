@@ -8,7 +8,7 @@ Features:
   - shortcut can be registered in `~/.config/sxhkd/sxhkdrc`:
 
         super + z
-	translate-notify -l fr -c
+        translate-notify -l fr -c
 
 ## Usage
 
