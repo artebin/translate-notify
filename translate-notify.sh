@@ -67,6 +67,11 @@ elif ${RETRIEVE_TEXT_FROM_SCREENSHOT}; then
 	SCREENSHOT_FILE="$(mktemp ~/.${0##*/}.XXXXXX.png)"
 	maim -s "${SCREENSHOT_FILE}" -q 100
 	
+	# Check the screenshot has been written
+	if [[ "${?}" -ne 0 ]]; then
+		exit 1
+	fi
+	
 	# Transform the screenshot file to increase detection rate
 	mogrify -modulate 100,0 -resize 400% "${SCREENSHOT_FILE}"
 	
