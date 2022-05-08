@@ -5,6 +5,10 @@ Simple script to show some text translation in a desktop notification.
 Features:
   - retrieve the text to translate from the clipboard or extract it from a screenshot (region of the screen selected by user input)
   - target language can be given in parameters, else the script uses the default locale
+  - shortcut can be registered in `~/.config/sxhkd/sxhkdrc`:
+
+        super + z
+	      translate-notify -l fr -c
 
 ## Usage
 
