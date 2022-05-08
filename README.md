@@ -9,6 +9,9 @@ Features:
 
         super + z
         translate-notify -l fr -c
+        
+        @super + x
+        translate-notify -l fr -s
 
 ## Usage
 
