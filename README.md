@@ -26,8 +26,8 @@ Usage: translate-notify.sh [-h] [-l TARGET_LANGUAGE] [-cs] [-t TEXT_TO_TRANSLATE
 Where:
   -h      Help.
   -l      Target language. If not speficied then the default locale will be used.
-  -c      Retrieve text to translate from the clipboard.
-  -s      Ask the user to capture a region of the screen with the mouse, extract the text with tesseract-ocr and translate it.
+  -c      Retrieve the text to translate from the clipboard.
+  -s      Retrieve the text to translate using OCR on a region of the screen captured by the user.
   -t      Text to translate.
   
 Dependencies:
