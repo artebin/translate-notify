@@ -3,8 +3,8 @@
 Simple script to show some text translation in a desktop notification.
 
 ## Features
-  - Retrieve the text to translate from the clipboard or extract it from a screenshot (a region of the screen selected by user input) with OCR.
-  - The translations are retrieved with `translate-shell` using Google Translate, so Internet connection is required. 
+  - Retrieve the text to translate from the clipboard or extract it from a screenshot (a region of the screen captured by the user) with OCR.
+  - The translations are retrieved with `translate-shell`, it uses Google Translate so an Internet connection is required. 
   - The target language can be specified as a parameter, else the script uses the default locale.
   - Shortcuts can be registered in `~/.config/sxhkd/sxhkdrc`.
 
