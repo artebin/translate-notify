@@ -27,7 +27,7 @@ Where:
   -h      Help.
   -l      Target language. If not speficied then the default locale will be used.
   -c      Retrieve text to translate from the clipboard.
-  -s      Let the user take a screenshot of a region of the screen, extract the text with tesseract-ocr and translate it.
+  -s      Ask the user to capture a region of the screen with the mouse, extract the text with tesseract-ocr and translate it.
   -t      Text to translate.
   
 Dependencies:
