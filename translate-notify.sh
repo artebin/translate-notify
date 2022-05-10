@@ -14,7 +14,7 @@ Where:
   
 Dependencies:
   xmlstarlet is required to escape HTML formatting.
-  tesseract-ocr, imagemagick and maim are required to extract the text to translate from a screenshot.
+  xdotool, tesseract-ocr, imagemagick and maim are required to extract the text to translate from a screenshot.
 EOF
 }
 
@@ -63,6 +63,12 @@ done
 if ${RETRIEVE_TEXT_FROM_CLIPBOARD}; then
 	TEXT_TO_TRANSLATE=$(xsel -o)
 elif ${RETRIEVE_TEXT_FROM_SCREENSHOT}; then
+	# If the script is triggered by `sxhkd` then a modifier key can still be pressed at this
+	# time of execution, but if we call `maim` here then the mouse inputs for capturing the
+	# screen region would be cancelled as soon as the modifier key is released.
+	# Below we free the modifier keys with `xdodool`.
+	xdotool keyup Control_L Control_R Shift_L Shift_R Super_L Super_R
+	
 	# Take the screenshot with the mouse and increase image quality with option -q from default 75 to 100
 	SCREENSHOT_FILE="$(mktemp ~/.${0##*/}.XXXXXX.png)"
 	maim -s "${SCREENSHOT_FILE}" -q 100
