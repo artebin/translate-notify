@@ -32,6 +32,6 @@ Where:
   
 Dependencies:
   xmlstarlet is required to escape HTML formatting.
-  tesseract-ocr, imagemagick and maim are required to extract the text to translate from a screenshot.
+  xdotool, tesseract-ocr, imagemagick and maim are required to extract the text to translate from a screenshot.
 ~~~
 
