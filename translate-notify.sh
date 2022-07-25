@@ -20,8 +20,8 @@ EOF
 
 exit_gracefully(){
 	# Delete files created while retrieving the text from a screenshot
-	rm -f ~/.$0.*.png
-	rm -f ~/.$0.*.png.txt
+	rm -f ~/.translate-notify.*.png
+	rm -f ~/.translate-notify.*.png.txt
 }
 trap exit_gracefully EXIT
 
@@ -70,7 +70,7 @@ elif ${RETRIEVE_TEXT_FROM_SCREENSHOT}; then
 	xdotool keyup Control_L Control_R Shift_L Shift_R Super_L Super_R
 	
 	# Take the screenshot with the mouse and increase image quality with option -q from default 75 to 100
-	SCREENSHOT_FILE="$(mktemp ~/.${0##*/}.XXXXXX.png)"
+	SCREENSHOT_FILE="$(mktemp ~/.translate-notify.XXXXXX.png)"
 	maim -s "${SCREENSHOT_FILE}" -q 100
 	
 	# Check the screenshot has been written
